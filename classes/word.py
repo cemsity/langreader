@@ -16,7 +16,8 @@ class Word():
     self.level :- int (currently 0-10) the level of familiarty according to
                 spaced repitition(not yet implemented) also used for color
                 coding. 0 = not yet learned
-    MORE TO COME
+    self.inflection :- list of inflection class. ( dont know how i want to
+                implement at this time)
 
     METHODS:
     ADD AS ADDED
@@ -43,5 +44,19 @@ class Word():
             'level': self.level
         }
 
+    def update(self, tuple):
+        prop = tuple[0]
+        value = tuple[1]
+        if prop == 'headword':
+            self.headword = value
+        elif prop == 'pos':
+            self.pos = value
+        elif prop == 'level':
+            self.level = int(value)
+        else:
+            return False
+        return True
+
+
     def __str__(self):
-        return self.to_dict()
+        return f"{self.word}, {self.headword}, {self.pos}, {self.level}"
