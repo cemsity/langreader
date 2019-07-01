@@ -9,31 +9,36 @@ class Word():
     of the same lexeme.
 
     self.word :- the expressed form in the text. Also the primary key for db
-                look up
+                look upHe
     self.headword :- Currently string of the Headword will be a reference to the
                 Headword
     self.pos :- part of speach in the the text
     self.level :- int (currently 0-10) the level of familiarty according to
                 spaced repitition(not yet implemented) also used for color
                 coding. 0 = not yet learned
-    self.inflection :- list of inflection class. ( dont know how i want to
-                implement at this time)
+    self.gram_cat :- list of grammatical categories this word
+                belongs to. ( dont know how i want to implement at this time
+                esp. because of syncretism ; may be list of lists?)
 
     METHODS:
     ADD AS ADDED
     Class Methods
     new_word(word) : cls -> makes a new word
     """
-    def __init__(self, word, headword, pos, level):
+    def __init__(self, word, headword, pos, level, gram_cat):
         self.word = word
         self.headword = headword
         self.pos = pos
         self.level = level
+        self.gram_cat = gram_cat
 
 
-    @classmethod
-    def new_word(cls, word):
-        return cls(word, None, None, 0)
+    def add_inflection(self, inflection):
+        self.inflection.append(inflection)
+
+
+    def remove_inflection(self, inflection):
+        self.inflection.remove(inflection)
 
 
     def to_dict(self):
@@ -41,7 +46,8 @@ class Word():
             'word': self.word,
             'headword': self.headword,
             'pos': self.pos,
-            'level': self.level
+            'level': self.level,
+            'inflection': self.inflection
         }
 
     def update(self, tuple):
@@ -53,6 +59,8 @@ class Word():
             self.pos = value
         elif prop == 'level':
             self.level = int(value)
+        elif prop == 'gram_cat'
+            self.gram_cat.append(value)
         else:
             return False
         return True
@@ -60,3 +68,8 @@ class Word():
 
     def __str__(self):
         return f"{self.word}, {self.headword}, {self.pos}, {self.level}"
+
+
+    @classmethod
+    def new_word(cls, word):
+        return cls(word, None, None, 0, [])

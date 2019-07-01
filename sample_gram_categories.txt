@@ -1,0 +1,16 @@
+Première leçon
+premier.fem lecon.sing
+À Paris
+a paris
+- Pardon, Madame. Où est le métro Saint-Michel ?
+                    etre.ind.pres.sing.3rd det.masc metro.sing saint.masc Michel.Name
+- Le métro Saint-Michel ? Attendez une minute...
+det.masc metro saint.masc michel.name.  attendre.2nd.plur.imp.
+Nous sommes au boulevard Saint-Michel. La fontain est là-bas.
+- Oui, d’accord. Mais où est le métro, s’il vous plaît ?
+- Mais bien sûr ! Voilà la Seine, et voici le pont.
+- C’est joli ; mais s’il vous plaît...
+- Ce n’est pas à gauche, alors c’est à droite.
+Voilà. Le métro est à droite !
+- Mais vous êtes sûre ?
+- Non. Je suis touriste aussi !

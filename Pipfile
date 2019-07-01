@@ -5,10 +5,8 @@ verify_ssl = false
 
 [dev-packages]
 
-
 [packages]
-
-tinydb = "*"
+peewee = "*"
 
 [requires]
 python_version = "3.7"
