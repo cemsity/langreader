@@ -1,4 +1,5 @@
 import re
+import datetime
 from .word import Word
 class Article():
     """
@@ -23,7 +24,7 @@ class Article():
         self.text = text
         self.word_list = self.listify(text)
         self.word_map = self.make_word_map(self.word_list)
-
+        # self.created = datetime()
 
     def listify(self, string):
         raw_list = re.split(r"\W+", string)
