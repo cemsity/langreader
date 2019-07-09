@@ -1,0 +1,8 @@
+Lexel = lexical element: An element of a lexeme EG runs in the lexeme RUN
+
+lexeme unit of lexical meaning conveyed as a set RUN:{run, runs, running, ran}
+
+lemma a reference, chosen by convention as the representation of a
+  lexeme(usually the dictionary form) run
+
+thus the lexeme RUN

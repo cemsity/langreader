@@ -1,13 +1,14 @@
-def make_word(word, gram_cats):
-    out = {'word': word,
-           'gram_cats': gram_cats}
-    return out
+import datetime
 
-def make_head(word, childs):
-    return {'word': word, 'children': childs}
+from peewee import *
 
-def make_hierarchy(head, order):
-    for item in order:
-        head['children']
+database = SqliteDatabase('user.db')
+class BaseModel(Model):
+    class Meta:
+        database = database
+
+class Article(BaseModel):
+    text = TextField()
+    created = DateTimeField()
 
 

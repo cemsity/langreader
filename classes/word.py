@@ -28,7 +28,7 @@ class Word():
     def __init__(self, word, headword, pos, level, gram_cat):
         self.word = word
         self.headword = headword
-        self.pos = pos
+        self.part_of_speech = pos
         self.level = level
         self.gram_cat = gram_cat
 
@@ -45,7 +45,7 @@ class Word():
         return {
             'word': self.word,
             'headword': self.headword,
-            'pos': self.pos,
+            'part_of_speech': self.part_of_speech,
             'level': self.level,
             'inflection': self.inflection
         }
@@ -59,7 +59,7 @@ class Word():
             self.pos = value
         elif prop == 'level':
             self.level = int(value)
-        elif prop == 'gram_cat'
+        elif prop == 'gram_cat':
             self.gram_cat.append(value)
         else:
             return False
