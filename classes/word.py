@@ -1,5 +1,6 @@
 class Word():
     """
+    Prototype
     The template for individual words. E.G. go, goes, went will all have a
     unique entry with a reference to their Headword/Lemma (GO), to form the
     lexeme.
@@ -24,6 +25,8 @@ class Word():
     ADD AS ADDED
     Class Methods
     new_word(word) : cls -> makes a new word
+
+
     """
     def __init__(self, word, headword, pos, level, gram_cat):
         self.word = word
